@@ -6,10 +6,11 @@ function mycontroller($scope,$filter)
                        {
 
                            $scope.name="";
+                           $scope.hasError=false;
                         $scope.checkText=function()
                            {
                                                           var count=0;
-
+$scope.hasError=false;
                                if($scope.name=='' ||$scope.name==' ')
                                    {
                                    $scope.result='Enter Text first';

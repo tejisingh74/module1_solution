@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
-      .message { font-size: 1.3em; font-weight: bold;}
+      .message { font-size: 1.3em; font-weight: bold; color: green}
+      .errorMessage {font-size: 1.3em; font-weight: bold; color: red}
     </style>
   </head>
 <body ng-app="myapp">
@@ -20,9 +21,11 @@
          <div class="form-group">
              <button class="btn btn-default" ng-click="checkText();">Check If Too Much</button>
          </div>
-         <div class="form-group message" ng-bind="result" >
+         <div class="message">
+         <div ng-bind="result" ng-class="{errorMessage: hasError}" >
            <!-- Your message can go here. -->
          </div>
+       </div>
    </div>
 <script src="js/angular.min.js"></script>
 <script src="js/app.js"></script>
